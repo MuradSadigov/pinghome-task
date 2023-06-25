@@ -45,7 +45,7 @@ const App = () => {
   return (
     <div className="w-full h-screen flex flex-col">
       
-      <Header goBack={forms[currentStep].prevStep} />
+      <Header goBack={forms[currentStep].prevStep} isCompleted={currentStep === forms.length - 1} />
       <div className="relative w-full p-5 h-full flex justify-start lg:flex-row max-sm:flex-col">
         {currentStep !== forms.length - 1 && (
           <ProgressBar
